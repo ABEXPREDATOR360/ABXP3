@@ -279,7 +279,7 @@ box-shadow: 1px 4px 65px -14px rgba(0,0,0,0.75);
     border-collapse: separate;
     border-spacing: 3px;
     background-repeat: no-repeat;
-    background-color: var(--abxred);
+    background-color: rgb(53, 53, 53);
     background-size: cover;
     background-position: center center;
     transition: 0.3s;
