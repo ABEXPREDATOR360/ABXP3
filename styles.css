@@ -1,0 +1,466 @@
+/*
+FONTS
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.hanken-grotesk-<uniquifier> {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+*/
+
+
+:root {
+    --abxred: rgb(160, 80, 82);
+}
+
+@font-face { 
+    font-family: Argentum-black; 
+    src: url('Assets/Fonts/argentum-sans.black.otf'); 
+}
+
+@font-face {
+    font-family: Argentum-regular;
+    src: url('Assets/Fonts/argentum-sans.regular.otf');
+}
+
+@font-face {
+    font-family: Argentum-semibold;
+    src: url('Assets/Fonts/argentum-sans.semibold.otf');
+}
+
+@font-face {
+    font-family: HK-grotesk;
+    src: url('Assets/Fonts/hk-grotesk.bold.otf');
+}
+
+@font-face {
+    font-family: Phonk;
+    src: url('Assets/Fonts/Phonk.otf');
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(37, 37, 37);
+    background-image: url('Assets//Images/Bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 110%;
+    background-position: center center;
+    width: 100%;
+    
+}
+
+::selection {
+    color: white;
+    background-color: var(--abxred);
+  }
+
+  
+/*Custom Scroll bar*/
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--abxred); 
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--abxred); 
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(111, 53, 53); 
+  }
+
+.header {
+    background-color: rgba(51, 51, 51, 0.795);
+    position: fixed;
+    top:0;
+    left:0;
+    padding: 20px;
+    width:100%;
+    z-index: 100;
+    font-family: Argentum-black, sans-serif;
+    backdrop-filter: blur(6px);
+    -webkit-box-shadow: 1px 4px 65px -14px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 4px 65px -14px rgba(0,0,0,0.75);
+box-shadow: 1px 4px 65px -14px rgba(0,0,0,0.75);
+}
+
+.headerlogo {
+    transition: 0.4s;
+    filter: brightness(100%);
+}
+
+.headerlogo:hover {
+    filter: invert(100%);
+    filter: invert(36%) sepia(25%) saturate(899%) hue-rotate(314deg) brightness(98%) contrast(85%);
+}
+
+.header h1 {
+    color: rgb(160, 80, 82);
+    display:inline;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    left: auto;
+    right: 10px;
+    width:100%;
+    font-size: 3em;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0);
+}
+
+.header h1 span {
+    transition: 0.2s;
+}
+
+.header h1 span:hover {
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.856);
+    color:rgba(0, 0, 0, 0);
+}
+
+.header h2 {
+    color: white;
+    top: 25px;
+    font-size: 1.3em;
+    position:absolute;
+    display: inline-block;
+    right:20px;
+    transition: 0.2s;
+}
+
+.header h2:hover {
+    color: var(--abxred);
+    cursor: pointer;
+}
+
+.cover {
+    height:100vh;
+    top:0;
+    position: relative;
+    width:100%;
+}
+
+.cover h1 {
+    font-size: 6em;
+    color: var(--abxred);
+    margin-top: 20vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    font-family: Argentum-regular, sans-serif;
+    transition: 1s;
+}
+
+.abxspan {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-image: var(--abxred);
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: center center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: var(--abxred);
+}
+
+.abxspan:hover {
+    
+    -webkit-text-fill-color: transparent;
+    background-image: url("Assets/ABX_Text_ImagesAnimation.gif");
+}
+
+.btn {
+    border-width: 4px;
+    border-color: var(--abxred);
+    border-radius: 10px;
+    color:white;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: var(--abxred);
+    padding: 10px;
+    text-align: center;
+    font-family: Argentum-regular, sans-serif;
+
+    position: absolute;
+    left: 43%;
+    right: 43%;
+
+    
+}
+
+.btn:hover {
+    border-color: white;
+    background-color: rgba(0,0,0,0);
+    color: var(--abxred);
+}
+
+#down-arrow {
+    margin-top:0px;
+    animation-name: downarrow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+#down-arrow:hover {
+    cursor: pointer;
+}
+
+#about {
+    height:100vh;
+    padding: 150px;
+    font-family: Argentum-regular, sans-serif;
+    line-height: 2.1;
+}
+
+#about h1 {
+    color: var(--abxred);
+    text-decoration: underline;
+    font-size: 4em;
+    letter-spacing: 2px;
+    
+}
+
+#about p {
+    font-size: 2em;
+    color: white;
+    
+}
+
+.abxred {
+    color: var(--abxred);
+    transition: 0.2s;
+}
+
+.abxred:hover {
+    color: white;
+    background-color: var(--abxred);
+}
+
+#gallery {
+    height: 100vh;
+    text-align: center;
+}
+
+#gallery h1 {
+    color: var(--abxred);
+    font-size: 4em;
+    letter-spacing: 2px;
+    font-family: Argentum-regular, sans-serif;
+    margin-top: 60px;
+    transition: 0.3s;
+}
+
+#gallery h1 span {transition: 0.3s;}
+#gallery h1 span:hover {color: white;}
+
+.gallerytable {
+    position: absolute;
+    width: 1400px;
+    height: 1000px;
+    padding: 10px;
+    border-spacing: 13px;
+    border-collapse: separate;
+}
+
+.gallerytable td {
+    margin: 10px;
+    border-collapse: separate;
+    border-spacing: 3px;
+    background-repeat: no-repeat;
+    background-color: var(--abxred);
+    background-size: cover;
+    background-position: center center;
+    transition: 0.3s;
+}
+
+.gallerytable td:hover {
+    transform: scale(2);
+    background-color: rgb(0,0,0,0);
+    background-size: contain;
+}
+
+/*CSS animation*/
+@keyframes downarrow {
+    from {margin-top:0px;}
+    50% {margin-top: 20px}
+    to {margin-top:0px;}
+  }
+
+@keyframes mobilegallery {
+    from {margin-left:550px;}
+    50% {margin-left: -550px;}
+    to {margin-left: 550px;}
+}
+
+
+
+footer {
+    background-color: black;
+    margin:0;
+    padding: 150px;
+    color: white;
+    
+    display: block;
+    position: absolute;
+    z-index: -5;
+    width:100%;
+
+}
+
+footer h2 {
+    font-size: 2em;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.eisas {
+    font-size: 1.5em;
+    color: rgb(32, 129, 255);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
+    transition: 0.3s;
+    display: block;
+    position: absolute;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.77);
+    border-radius: 5px;
+}
+
+.eisas:hover {
+    background-color: rgb(0, 96, 221);
+    color: white;
+    padding: 10px;
+}
+
+
+
+.creditlogo {
+    display: inline-block;
+    color: white;
+}
+
+.creditlogo p {
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.creditlogo img {
+    width: 150px;
+}
+
+
+.footercredits {
+    display: inline-block;
+    position: absolute;
+    right: 100px;
+    top: 130px;
+
+}
+
+.letschat {
+    height:100vh;
+    width:100%;
+    text-align: center;
+
+
+    background-color: rgb(37, 37, 37);
+    background-image: url('Assets/Images/ContactPageBKG.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 110%;
+    background-attachment: fixed;
+}
+
+.letschat h1 {
+    color: white;
+    font-size: 8em;
+    width: 100%;
+    height:200px;
+    margin-top:-20px;
+    font-family: Phonk, sans-serif;
+
+    transition: 0.4s;
+}
+
+
+.letschatspan {
+    font-family: Argentum-semibold, sans-serif;
+}
+
+.contactemail {
+    background-color: rgb(37, 37, 37);
+    background-image: url('Assets/Images/ContactInfoPageBKG.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+
+    background-attachment: fixed;
+    height: 100vh;
+
+    text-align: center;
+}
+.emailid {
+    color: white;
+    font-family: Phonk;
+    font-size: 3em;
+}
+
+.copysvg {
+    text-align: center;
+    filter: invert(100%) sepia(0%) saturate(7442%) hue-rotate(133deg) brightness(134%) contrast(98%);
+}
+.copysvg:hover {
+    filter: invert(0%);
+    filter: invert(36%) sepia(25%) saturate(899%) hue-rotate(314deg) brightness(98%) contrast(85%);
+
+}
+
+/* Mobile Design */
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-size: 180%;
+    }
+    .cover h1 {
+      font-size: 3.5em;
+      margin-left: 5vw;
+      margin-right: 5vw;
+    }
+    .btn {
+        position: absolute;
+        left: 30%;
+        right: 30%
+    }
+    #about {
+        padding: 20px;
+    }
+
+    #gallery h1 {
+        font-size: 4em;
+        margin-top: 400px;
+    }
+    
+    .gallerytable {
+        animation-name: mobilegallery;
+        animation-duration: 60s;
+        animation-iteration-count: infinite;
+    }
+
+
+    .emailid {
+        font-size: 1.5em;
+    }
+    
+  }
